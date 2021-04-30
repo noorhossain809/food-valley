@@ -1,8 +1,8 @@
 # Create food-valley Website by React & Node.js
 
-*** Website Link:
+*** `Website Link`:
 
-(`https://gents-collection.web.app/`)
+[https://gents-collection.web.app/]
 
 <!-- ## Available Scripts
 
