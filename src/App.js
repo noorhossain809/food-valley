@@ -1,23 +1,45 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button } from '@material-ui/core';
+import Home from './components/Home/Home';
+import Header from './components/Header/Header';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Dinner from './components/Dinner/Dinner';
+import Lunch from './components/Lunch/Lunch';
+import Breakfast from './components/Breakfast/Breakfast';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      
+      <Router>
+    <Header></Header>
+
+       
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/dinner">
+          <Dinner></Dinner>
+          </Route>
+          <Route path="/lunch">
+            <Lunch></Lunch>
+          </Route>
+          <Route path="/breakfast">
+            <Breakfast></Breakfast>
+          </Route>
+        </Switch>
+      
+    </Router>
+      
     </div>
   );
 }
